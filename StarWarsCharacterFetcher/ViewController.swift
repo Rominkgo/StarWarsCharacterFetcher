@@ -35,20 +35,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         view.backgroundColor = .red
         
         presenter.setViewDelegate(view: self)
-        presenter.userDidPressActionButton()
- //       displayNewChars(newCharacters)
+        presenter.fetchCharacters()
         
         setUpTableView()
         tableView.delegate = self
         tableView.dataSource = self
-        
-
-        // Do any additional setup after loading the view.
     }
     
     func displayNewChars(_ newCharacters: [String]) {
         characters.append(contentsOf: newCharacters)
-        
         DispatchQueue.main.async { [weak self] in
             self?.tableView.reloadData()
         }
@@ -68,18 +63,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
-
         let character = characters[indexPath.row]
         cell.textLabel?.text = character
-        
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return characters.count
     }
-    
-
-    
 }
 

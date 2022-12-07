@@ -16,12 +16,11 @@ class StarWarsPresenter: HomePresenterProtocol {
         self.repository = repository
     }
     
-    
     func setViewDelegate(view: HomeViewProtocol) {
         self.homeView = view
     }
     
-    func userDidPressActionButton() {
+    func fetchCharacters() {
         repository.fetchCharacterNames { [weak self] list in
             self?.homeView?.displayNewChars(self?.extractStarWars(charactersName: list) ?? [])
         }
@@ -29,17 +28,14 @@ class StarWarsPresenter: HomePresenterProtocol {
     
     func getStarWarsCharactersName(list: [StarWarsChars]) -> [String] {
         var newString: [String] = []
-        
         for item in list {
             newString.append(item.name)
         }
-        
         return newString
     }
     
     func extractStarWars(charactersName list: [StarWarsChars]) -> [String] {
         return list.map { $0.name }
-        
     }
 }
 
@@ -49,5 +45,5 @@ protocol HomeViewProtocol: AnyObject {
 
 protocol HomePresenterProtocol {
     func setViewDelegate(view: HomeViewProtocol)
-    func userDidPressActionButton()
+    func fetchCharacters()
 }

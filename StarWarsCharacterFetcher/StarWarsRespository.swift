@@ -11,13 +11,11 @@ class StarWarsRepository: StarWarsRepositoryProtocol {
     
     private let url = URL(string: "https://swapi.dev/api/people")
     
-    
     func fetchCharacterNames(onSuccess: @escaping ([StarWarsChars]) -> Void) {
         URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
             if error == nil {
                 do {
                     let response = try JSONDecoder().decode(StarWarsCharsFetched.self, from: data!)
-                    
                     onSuccess(response.results)
                 }
                 catch {
@@ -26,7 +24,6 @@ class StarWarsRepository: StarWarsRepositoryProtocol {
             }
         }).resume()        
     }
-    
 }
 
 protocol StarWarsRepositoryProtocol {

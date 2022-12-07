@@ -7,11 +7,9 @@
 
 import Foundation
 
-
 struct StarWarsCharsFetched: Codable {
     let results: [StarWarsChars]
 }
-
 
 struct StarWarsChars: Codable {
     let name: String
