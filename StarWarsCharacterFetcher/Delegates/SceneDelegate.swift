@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func createRootViewController() -> UIViewController {
-        let presenter: HomePresenterProtocol = StarWarsPresenter(repository: StarWarsRepository())
+        let presenter: HomePresenterProtocol = StarWarsPresenter(repository: StarWarsAPIRepository())
         return ViewController(presenter: presenter)
     }
 

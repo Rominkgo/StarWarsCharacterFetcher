@@ -7,7 +7,9 @@
 
 import Foundation
 
-class StarWarsRepository: StarWarsRepositoryProtocol {
+class StarWarsAPIRepository: StarWarsRepositoryProtocol {
+    
+    let persistence = StarWarsPersistenceService.shared
     
     private let url = URL(string: "https://swapi.dev/api/people")
     
@@ -17,6 +19,7 @@ class StarWarsRepository: StarWarsRepositoryProtocol {
                 do {
                     let response = try JSONDecoder().decode(StarWarsCharsFetched.self, from: data!)
                     onSuccess(response.results)
+
                 }
                 catch {
                     print("error")

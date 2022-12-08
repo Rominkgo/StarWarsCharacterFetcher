@@ -12,6 +12,9 @@ class StarWarsPresenter: HomePresenterProtocol {
     weak var homeView: HomeViewProtocol?
     private let repository: StarWarsRepositoryProtocol
     
+    let persistence = StarWarsPersistenceService.shared
+    
+    
     init(repository: StarWarsRepositoryProtocol) {
         self.repository = repository
     }
@@ -37,6 +40,23 @@ class StarWarsPresenter: HomePresenterProtocol {
     func extractStarWars(charactersName list: [StarWarsChars]) -> [String] {
         return list.map { $0.name }
     }
+    
+    func saveSWCharacters(_ toBeSaved: [StarWarsChars]){
+        
+        for item in toBeSaved {
+            persistence.save(starWarsCharacter: item)
+        }
+        persistence.save()
+    }
+    
+    func transformData(_ SWCharacter: [SWCharacter]) -> [StarWarsChars] {
+//        let data = StarWarsPersistenceService.shared.getSWCharacter()!
+//        var newList: [StarWarsChars] = []
+//        var results = newList.append(data)
+        
+    }
+       
+        
 }
 
 protocol HomeViewProtocol: AnyObject {
