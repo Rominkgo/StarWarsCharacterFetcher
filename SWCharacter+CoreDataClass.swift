@@ -1,8 +1,8 @@
 //
-//  Character+CoreDataClass.swift
+//  SWCharacter+CoreDataClass.swift
 //  StarWarsCharacterFetcher
 //
-//  Created by Default on 12/7/22.
+//  Created by Default on 12/9/22.
 //
 //
 
@@ -11,6 +11,5 @@ import CoreData
 
 @objc(SWCharacter)
 public class SWCharacter: NSManagedObject {
-    
 
 }

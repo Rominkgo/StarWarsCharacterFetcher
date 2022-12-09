@@ -13,7 +13,7 @@ class StarWarsPersistenceService {
     static let shared = StarWarsPersistenceService()
     
     lazy var persistenceContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "Persisted_JSON")
+        let container = NSPersistentContainer(name: "StarWars")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
@@ -50,4 +50,7 @@ class StarWarsPersistenceService {
         
         return result
     }
+    
+    
+    
 }

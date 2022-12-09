@@ -1,8 +1,8 @@
 //
-//  Character+CoreDataProperties.swift
+//  SWCharacter+CoreDataProperties.swift
 //  StarWarsCharacterFetcher
 //
-//  Created by Default on 12/7/22.
+//  Created by Default on 12/9/22.
 //
 //
 
@@ -16,7 +16,7 @@ extension SWCharacter {
         return NSFetchRequest<SWCharacter>(entityName: "SWCharacter")
     }
 
-    @NSManaged public var name: String
+    @NSManaged public var name: String?
     @NSManaged public var eye_color: String?
 
 }

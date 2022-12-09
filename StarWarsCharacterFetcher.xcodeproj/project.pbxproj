@@ -17,8 +17,9 @@
 		04AD79BE293FF27200C24BFF /* StarWarsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AD79BD293FF27200C24BFF /* StarWarsModel.swift */; };
 		04AD79C7294124A500C24BFF /* StarWarsCoreDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AD79C6294124A500C24BFF /* StarWarsCoreDataRepository.swift */; };
 		04AD79CA2941307400C24BFF /* StarWars.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04AD79C82941307400C24BFF /* StarWars.xcdatamodeld */; };
-		04AD79CD294130DB00C24BFF /* Character+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AD79CB294130DB00C24BFF /* Character+CoreDataClass.swift */; };
-		04AD79CE294130DB00C24BFF /* Character+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AD79CC294130DB00C24BFF /* Character+CoreDataProperties.swift */; };
+		04AD79D82942892700C24BFF /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AD79D72942892700C24BFF /* DataProvider.swift */; };
+		04AD79DB2943838D00C24BFF /* SWCharacter+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AD79D92943838D00C24BFF /* SWCharacter+CoreDataClass.swift */; };
+		04AD79DC2943838D00C24BFF /* SWCharacter+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AD79DA2943838D00C24BFF /* SWCharacter+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +35,9 @@
 		04AD79BD293FF27200C24BFF /* StarWarsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsModel.swift; sourceTree = "<group>"; };
 		04AD79C6294124A500C24BFF /* StarWarsCoreDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsCoreDataRepository.swift; sourceTree = "<group>"; };
 		04AD79C92941307400C24BFF /* StarWars.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StarWars.xcdatamodel; sourceTree = "<group>"; };
-		04AD79CB294130DB00C24BFF /* Character+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Character+CoreDataClass.swift"; sourceTree = "<group>"; };
-		04AD79CC294130DB00C24BFF /* Character+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Character+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		04AD79D72942892700C24BFF /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		04AD79D92943838D00C24BFF /* SWCharacter+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SWCharacter+CoreDataClass.swift"; sourceTree = "<group>"; };
+		04AD79DA2943838D00C24BFF /* SWCharacter+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SWCharacter+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +54,8 @@
 		04AD7999293FC57100C24BFF = {
 			isa = PBXGroup;
 			children = (
-				04AD79CB294130DB00C24BFF /* Character+CoreDataClass.swift */,
-				04AD79CC294130DB00C24BFF /* Character+CoreDataProperties.swift */,
+				04AD79D92943838D00C24BFF /* SWCharacter+CoreDataClass.swift */,
+				04AD79DA2943838D00C24BFF /* SWCharacter+CoreDataProperties.swift */,
 				04AD79C82941307400C24BFF /* StarWars.xcdatamodeld */,
 				04AD79A4293FC57100C24BFF /* StarWarsCharacterFetcher */,
 				04AD79A3293FC57100C24BFF /* Products */,
@@ -74,6 +76,7 @@
 				04AD79D02941394F00C24BFF /* Repository */,
 				04AD79CF2941393700C24BFF /* Delegates */,
 				04AD79A9293FC57100C24BFF /* ViewController.swift */,
+				04AD79D72942892700C24BFF /* DataProvider.swift */,
 				04AD79BB293FC94600C24BFF /* StarWarsPresenter.swift */,
 				04AD79BD293FF27200C24BFF /* StarWarsModel.swift */,
 				04AD79AE293FC57200C24BFF /* Assets.xcassets */,
@@ -175,12 +178,13 @@
 				04AD79C7294124A500C24BFF /* StarWarsCoreDataRepository.swift in Sources */,
 				04AD79A6293FC57100C24BFF /* AppDelegate.swift in Sources */,
 				04AD79BA293FC68A00C24BFF /* StarWarsRespository.swift in Sources */,
-				04AD79CD294130DB00C24BFF /* Character+CoreDataClass.swift in Sources */,
+				04AD79D82942892700C24BFF /* DataProvider.swift in Sources */,
+				04AD79DB2943838D00C24BFF /* SWCharacter+CoreDataClass.swift in Sources */,
+				04AD79DC2943838D00C24BFF /* SWCharacter+CoreDataProperties.swift in Sources */,
 				04AD79CA2941307400C24BFF /* StarWars.xcdatamodeld in Sources */,
 				04AD79A8293FC57100C24BFF /* SceneDelegate.swift in Sources */,
 				04AD79BE293FF27200C24BFF /* StarWarsModel.swift in Sources */,
 				04AD79BC293FC94600C24BFF /* StarWarsPresenter.swift in Sources */,
-				04AD79CE294130DB00C24BFF /* Character+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

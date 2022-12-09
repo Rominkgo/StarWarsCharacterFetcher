@@ -35,7 +35,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         view.backgroundColor = .red
         
         presenter.setViewDelegate(view: self)
-        presenter.fetchCharacters()
+//        presenter.fetchCharacters()
+        presenter.fetchStoredCharacters()
         
         setUpTableView()
         tableView.delegate = self
